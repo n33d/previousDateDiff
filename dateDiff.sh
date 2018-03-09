@@ -1,3 +1,10 @@
+if [[ -f $1 ]]; then
+    echo "$1 argument valid"
+else
+    echo "$1 is not a file"
+    exit 1
+fi
+
 while read p; do
 	echo "$previous - $p"
 	echo "-"
